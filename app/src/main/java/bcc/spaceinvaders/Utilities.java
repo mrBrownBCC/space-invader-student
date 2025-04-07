@@ -38,7 +38,7 @@ public class Utilities {
             ENEMY_PROJECTILE_1_IMAGE = cropToContent(ImageIO.read(new File("app/src/main/resources/images/enemyBullet1.png")));
             ENEMY_PROJECTILE_2_IMAGE = cropToContent(ImageIO.read(new File("app/src/main/resources/images/enemyBullet2.png")));
             BOSS_PROJECTILE_IMAGE = cropToContent(ImageIO.read(new File("app/src/main/resources/images/bossProjectileImage.png")));
-            PLAYER_PROJECTILE_IMAGE = cropToContent(ImageIO.read(new File("app/src/main/resources/images/playerProjectile.png")));
+            PLAYER_PROJECTILE_IMAGE = cropToContent(ImageIO.read(new File("app/src/main/resources/images/userProjectile.png")));
             ENEMY_PROJECTILE_3_IMAGE = cropToContent(ImageIO.read(new File("app/src/main/resources/images/enemyBullet3.png")));
     
         } catch (IOException e) {

@@ -37,10 +37,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
     public void initializeStars() {
         // step 3.2 - create an array of stars and use a for loop to initialize them. Note that the 'stars' variable is already declared for you above. 
         // The size of the array should be > 50 to pass tests but is up to you!
-        stars = new Star[100];
-        for (int i = 0; i < stars.length; i++) {
-            stars[i] = new Star();
-        }
+        stars = new Star[0];
     }
 
     @Override
@@ -148,12 +145,9 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
         //step 5.8 - check if the level is completed. The level is completed if there are no enemy ships in the gameObjects ArrayList.
         //use instanceof!
         //return true if the level is completed and false otherwise.
-        for (GameObject obj : gameObjects) {
-            if (obj instanceof EnemyShip) {
-                return false; // If any enemy ship is present, level is not completed
-            }
-        }
-        return true; // No enemy ships present, level is completed
+       
+
+        return false;
     }
 
     public void addProjectile(Projectile p) {
@@ -167,26 +161,19 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
             //step 4.3 - Add enemies for level 0. You should add 3 SpeedyEnemies with random x positions and y = -100.
             //NOTE - the last parameeter should be 'this'
             //after you make each enemy, add it to the gameObjects ArrayList
-            for (int i = 0; i < 3; i++) {
-                double x = Math.random() * Utilities.SCREEN_WIDTH;
-                double y = - 100;
-                EnemyShip enemy = new SpeedyEnemy(x, y, this);
-                gameObjects.add(enemy);
-            }
+           
         } else if (level == 1) {
             //step 6.3- Add enemies for level 1. You should add 3 TankyEnemies with x positions of 250, 350, and 450 and y = -150.
             //try to use a for loop to do this.
             //after you make each enemy, add it to the gameObjects ArrayList
-            for(int i = 0; i < 3; i ++){
-                gameObjects.add(new TankyEnemy(250 + 100*i, -150,this));
-            }
+           
         } else if(level == 2){
             //step 6.5- Add enemies for level 2. You should add 1 Boss with x position of 300 and y = -200.
-            gameObjects.add(new Boss(Utilities.SCREEN_WIDTH / 2 - 100, -200, this));
+            
         } else if(level == 3){
-            
+            //BONUS LEVEL - OPTIONAL
         } else if(level == 4){
-            
+            //BONUS LEVEL - OPTIONAL
         } else {
             gameOver = true;
             message = "You Win! Score: " + score;

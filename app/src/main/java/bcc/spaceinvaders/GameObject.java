@@ -99,17 +99,14 @@ public class GameObject {
         //check that the other object is not self
         //check if either object is alive
         //check if either object is not alive
-        if(other == this || !isAlive() || !other.isAlive()) {
-            return false; // No collision with itself
-        }
+       
         //check 4 corners of other object, see if any are inside this object using the containsPoint method above. 
-        return containsPoint(other.getX(), other.getY()) ||
-               containsPoint(other.getX() + other.getWidth(), other.getY()) ||
-               containsPoint(other.getX(), other.getY() + other.getHeight()) ||
-               containsPoint(other.getX() + other.getWidth(), other.getY() + other.getHeight());
+        
+
+        return false;
     }
 
     public void handleCollision(GameObject other) {
-        // Default implementation does nothing
+        // Default implementation does nothing, DONT CHANGE
     }
 }

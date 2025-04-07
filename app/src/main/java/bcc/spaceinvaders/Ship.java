@@ -9,15 +9,13 @@ public class Ship extends GameObject {
     protected int maxHealth;
     public Ship(double x, double y, int width, int height, Image image, int health, GamePanel game) {
         //step 2.1  A call to super should be made and all instance variables should be initialized. Set health and maxHealth to the same value. 
-
-        super(x, y, width,height, image, game);
-        this.health = health;
-        this.maxHealth = health;
+        
+        super(0,0,0,0,null,null);
     }
 
     public boolean isAlive() {
         //step 5.3 - return true if heath is greater than 0 and false otherwise.
-        return health > 0;
+        return true;
     }
 
     public void takeDamage(int amount) {

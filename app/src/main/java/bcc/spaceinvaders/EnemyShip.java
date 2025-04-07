@@ -42,29 +42,14 @@ public class EnemyShip extends Ship {
     public void handleCollision(GameObject other) {
         //step 5.5 - if the other object is a projectile and it is friendly, take damage. This code should be similar to the code in the PlayerShip handleCollision method.
         //the only difference is that now we take damage if the projectile IS friendly. 
-        if(other instanceof Projectile) {
-            Projectile projectile = (Projectile) other;
-            if(projectile.isFriendly()) {
-                takeDamage(projectile.getDamage());
-            }
-        }
+        
     }
     
     @Override
     public void shoot(){
         //step 4.5 - create a project and add it to the game using the game.addProjectile method.
         //use a yVelocity of 10 and an image of your choice (either Utilities.ENEMY_PROJECTILE_1_IMAGE, Utilities.ENEMY_PROJECTILE_2_IMAGE, or Utilities.ENEMY_PROJECTILE_3_IMAGE).
-        Image bulletImage = null;
-        double r = Math.random();
-        if(r < .33){
-            bulletImage = Utilities.ENEMY_PROJECTILE_1_IMAGE;
-        } else if (r < .66){
-            bulletImage = Utilities.ENEMY_PROJECTILE_2_IMAGE;
-        } else {
-            bulletImage = Utilities.ENEMY_PROJECTILE_3_IMAGE;
-        }
-        Projectile p = new Projectile(x + width / 2 - Utilities.PROJECTILE_SIZE/2, y + height - Utilities.PROJECTILE_SIZE/2, 0, 10,bulletImage, false, game);
-        game.addProjectile(p);
+        
     }
 
     public int getPointValue() {

@@ -16,17 +16,12 @@ public class GreenProjectile extends Projectile {
     //if the player's x position plus width is less than the projectile's x position, subtract .3 from the xVelocity.
     //this will make the projectile follow the player.
     //to get the player's x position, use game.getPlayer().getX() and game.getPlayer().getWidth() to get the player's width. 
-    super.update();
-    if (game.getPlayer().getX() > x + width) {
-      System.out.println("xVelocity: " + xVelocity + " " +  game.getPlayer().getX() + " " + x);
-      xVelocity += .3;
-    } else if (game.getPlayer().getX() + game.getPlayer().getWidth() < x) {
-      xVelocity -= .3;
-    }
+    
   }
 
   @Override
   public void display(Graphics g) {
+    //adds spin effect, you can keep or modify if you'd like
     this.rotation += 5;
     super.display(g);
   }

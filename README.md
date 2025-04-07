@@ -120,7 +120,7 @@ RUN THE TESTS(before doing this, it is a better idea to run your GUI and see if 
 gradle test5
 ```
 
-## Part 6 - TankyEnemy and Boss Enemy - 10
+## Part 6 - TankyEnemy and Boss Enemy - 10%
 Now that we have the basic mechanics down, inheritance makes it very easy to add new enemy types. 
 
 1. TankyShip.java constructor. 

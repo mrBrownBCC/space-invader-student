@@ -18,22 +18,14 @@ public class Star {
         // The brightness should be a random value between 0 and 1.
         // The rest is up to you!
 
-        this.x = Math.random() * Utilities.SCREEN_WIDTH;
-        this.y = Math.random() * Utilities.SCREEN_HEIGHT;
-        this.yVelocity = Math.random() * 2 + 1; // Random speed between 1 and 3
-        this.radius = (int) (Math.random() * 3 + 1); // Random radius between 1 and 3
-        this.brightness = Math.random(); // Random brightness between 0 and 1
+        
     }
 
     public void update() {
         // step 3.3 - update the y position of the star by adding the y velocity to it.
         // If the star goes off the bottom of the screen, reset its position to the top (y=0)
         // with a random x position.
-        y += yVelocity;
-        if (y > Utilities.SCREEN_HEIGHT) {
-            y = 0;
-            x = Math.random() * Utilities.SCREEN_WIDTH;
-        }
+        
     }
 
     public void display(Graphics g) {

@@ -8,10 +8,7 @@ public class Boss extends EnemyShip {
         // Utilities.BOSS_IMAGE for the image, 100 for health, and 30 for shot cooldown.
         // Set the xVelocity to 4 and yVelocity to 1.
         // Set the point value to 100.
-        super(x, y, 200, 200, Utilities.BOSS_IMAGE, 100, 30,game);
-        this.xVelocity = 4; 
-        this.yVelocity = 1; 
-        pointValue = 100; // Set point value for Boss
+        super(0,0,0,0,null,0,0,null);
     }
 
     @Override
@@ -20,11 +17,7 @@ public class Boss extends EnemyShip {
        //this will stop the boss from moving down after a certain height.
        //no code for xVelocity is needed. Handled by inheritance! 
        //make sure to call super.update() at the end of this method.
-       if(y > 0){
-            yVelocity = 0; // Stop moving down after reaching a certain height
-       }
-
-       super.update();
+      
     }
 
     @Override

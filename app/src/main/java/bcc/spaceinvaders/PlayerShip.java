@@ -9,39 +9,28 @@ public class PlayerShip extends Ship {
         //step 2.2  A call to super should be made and all instance variables should be initialized. set the image to the player image and set the health to 100.
         //You can access the image using Utilities.PLAYER_NORMAL_IMAGE. All other images will be accessed in the same way.
         //Set the width and height to 70.
-        super(x, y, 70,70,Utilities.PLAYER_NORMAL_IMAGE, 100, game);
+        
+        super(0,0,0,0,null,0,null);
     }
 
 
     @Override
     public void update() {
         //step 2.3  Implement the update method. The player ship should move based on the WASD keys.
-
+        // set the xVelocity and yVelocity to 0
        
-
-        //then set the xVelocity and yVelocity to 0
-        xVelocity = 0;
-        yVelocity = 0;
 
         //the if statment below checks if the W key is pressed. If it is, set the yVelocity to -Utilities.PLAYER_SPEED, moving the ship up. Similar code 
         //can be used for the other keys using KeyEvent.VK_S, KeyEvent.VK_A, and KeyEvent.VK_D.
         if (Utilities.isKeyPressed(KeyEvent.VK_W)){
             yVelocity = -Utilities.PLAYER_SPEED;
         } 
-        //DELETE THESE
-        if (Utilities.isKeyPressed(KeyEvent.VK_S)){ 
-            yVelocity = Utilities.PLAYER_SPEED;
-        }
-        if (Utilities.isKeyPressed(KeyEvent.VK_A)){ 
-            xVelocity = -Utilities.PLAYER_SPEED;
-        }
-        if (Utilities.isKeyPressed(KeyEvent.VK_D)){ 
-            xVelocity = Utilities.PLAYER_SPEED;
-        }
         //now make a call to super.update()
-        super.update();
+
+
         //step 2.4 make a call to keepInBounds() to make sure the ship does not go off the screen.
-        keepInBounds();
+
+
     }
 
     public void keepInBounds() {
@@ -49,9 +38,7 @@ public class PlayerShip extends Ship {
         //The code for preventing the ship from going off the left side of the screen is provided below as an example.  
         //Use Utilities.SCREEN_WIDTH and Utilities.SCREEN_HEIGHT to get the width and height of the screen.
         if (x < 0) x = 0;
-        if (x > Utilities.SCREEN_WIDTH - width) x = Utilities.SCREEN_WIDTH - width;
-        if (y < 0) y = 0;
-        if (y > Utilities.SCREEN_HEIGHT - height) y = Utilities.SCREEN_HEIGHT - height;
+        
     }
 
     @Override
